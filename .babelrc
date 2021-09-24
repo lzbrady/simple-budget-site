@@ -1,0 +1,24 @@
+{
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": ["./src"],
+                "alias": {
+                    "@icons": "./static/icons",
+                    "@images": "./static/images"
+                }
+            }
+        ]
+    ],
+    "presets": [
+        [
+            "babel-preset-gatsby",
+            {
+                "targets": {
+                    "browsers": [">0.25%", "not dead"]
+                }
+            }
+        ]
+    ]
+}

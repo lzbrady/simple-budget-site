@@ -107,7 +107,7 @@ const IndexPage = () => {
         >
             <title>Home | Simple Budget</title>
 
-            <Section small>
+            <Section marginTop={16}>
                 <Columns alignTop>
                     <Col>
                         <CategoryIcon fill={colors.primary} width={50} height={50} />
@@ -212,7 +212,7 @@ const IndexPage = () => {
                 </ReasonsContainer>
             </Section>
 
-            <Section>
+            <Section marginTop={80}>
                 <Title>Take Control of Your Finances</Title>
                 <BodyText>
                     Living paycheck to paycheck? Worried about making rent or other bills? You're not alone. Imagine instead of being one of these statistics, you had a plan for every dollar you
@@ -428,7 +428,7 @@ const ScreenshotDesc = styled.h3`
 `;
 
 const Section = styled.div`
-    margin-top: ${(props) => (props.small ? '16px' : '64px')};
+    margin-top: ${(props) => (props.marginTop ? `${props.marginTop}px` : '64px')};
     background-color: ${(props) => props.backgroundColor};
     padding: 16px;
 `;

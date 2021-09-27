@@ -289,7 +289,7 @@ const Col = styled.div`
 `;
 
 const ColDivider = styled.div`
-    background-color: #c6cdd2;
+    background-color: ${colors.lightGray};
     width: 1px;
     height: 144px;
     align-self: center;

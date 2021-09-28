@@ -6,7 +6,7 @@ import { colors } from 'BaseTheme';
 
 export default function Button({ inverse, style, text, to }) {
     return (
-        <StyledButton inverse={inverse} style={style} to={to}>
+        <StyledButton inverse={inverse ? 1 : 0} style={style} to={to}>
             {text}
         </StyledButton>
     );

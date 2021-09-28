@@ -6,7 +6,7 @@ import MainLayout from 'layouts/MainLayout';
 
 import { colors } from 'BaseTheme';
 
-export default function About({}) {
+export default function About() {
     return (
         <MainLayout
             HeroComponent={
@@ -15,18 +15,19 @@ export default function About({}) {
                     <StaticImage alt="About Us" src="../../static/images/about.jpg" layout="fullWidth" height={128} />
 
                     <HeroContentContainer>
-                        <HeroTitle>About Simple Budget</HeroTitle>
                         <HeroSubtitle>(Founder Luke hiking in the Blue Ridge Mountains)</HeroSubtitle>
                     </HeroContentContainer>
                 </HeroHeader>
             }
         >
             <Section>
+                <Title>About Simple Budget</Title>
+
                 <Row>
-                    <div>
+                    <ImageContainer>
                         <StaticImage alt="App Screenshot One" src="../../static/images/Pancakes.png" width={240} />
                         <Caption>Pancakes working on an early iteration</Caption>
-                    </div>
+                    </ImageContainer>
 
                     <Content>
                         <BodyText>
@@ -81,7 +82,8 @@ const Caption = styled.p`
 
 const Content = styled.div`
     flex: 1;
-    margin-left: 32px;
+    margin: 8px 0px;
+    min-width: 240px;
 `;
 
 const HeroHeaderBG = styled.div`
@@ -106,7 +108,7 @@ const HeroContentContainer = styled.div`
     background: linear-gradient(0deg, rgb(252, 255, 251) 0%, rgb(252, 255, 251, 75%) 60%, rgb(252, 255, 251, 0%));
     opacity: 1;
     z-index: 20;
-    padding-top: 32px;
+    padding-top: 16px;
 `;
 
 const HeroHeader = styled.div`
@@ -121,13 +123,15 @@ const HeroSubtitle = styled.p`
     font-size: 14px;
 `;
 
-const HeroTitle = styled.h1`
-    margin: 32px 0px 8px;
+const ImageContainer = styled.div`
+    margin: 0px 16px;
 `;
 
 const Row = styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 `;
 
 const Section = styled.div`

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
+import React, { useState, useEffect, useCallback } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import MainLayout from 'layouts/MainLayout';
@@ -15,8 +15,12 @@ const ButtonStyle = {
 };
 
 const BubbleSectionStyle = {
-    margin: '96px 32px 0px',
+    margin: '96px 16px 0px',
     borderRadius: '26px',
+};
+
+const BubbleTitleStyle = {
+    textAlign: 'center',
 };
 
 const PowerfulInsightsStyle = {
@@ -35,6 +39,7 @@ const ScreenshotContainerStyle = {
     width: '100%',
     minWidth: '260px',
     position: 'relative',
+    margin: '16px 8px',
 };
 
 const ScreenshotLeftStyle = {
@@ -74,6 +79,8 @@ const IndexPage = () => {
                 return <StaticImage style={PremiumScreenshotStyle} alt="Premium Screenshot One" src="../../static/images/premium/Category_Details.png" width={240} />;
             case 3:
                 return <StaticImage style={PremiumScreenshotStyle} alt="Premium Screenshot One" src="../../static/images/premium/Budget_Calculator.png" width={240} />;
+            default:
+                return <StaticImage style={PremiumScreenshotStyle} alt="Premium Screenshot One" src="../../static/images/premium/Annual_Savings.png" width={240} />;
         }
     }, [premiumScreenshotIndex]);
 
@@ -196,7 +203,7 @@ const IndexPage = () => {
             <Section style={BubbleSectionStyle} backgroundColor={colors.primary}>
                 <ReasonsContainer>
                     <ReasonTitleContainer>
-                        <TitleLight>How Would a Budget Help Me?</TitleLight>
+                        <TitleLight style={BubbleTitleStyle}>How Would a Budget Help Me?</TitleLight>
                     </ReasonTitleContainer>
 
                     <ReasonsWrapper>
@@ -208,7 +215,7 @@ const IndexPage = () => {
                         <Reason>Build stronger financial independence by taking control of your own money</Reason>
                     </ReasonsWrapper>
 
-                    <Button inverse style={ButtonStyle} text="Get Simple Budget" to="why-simple-budget" />
+                    <Button inverse style={ButtonStyle} text="See More" to="why-simple-budget" />
                 </ReasonsContainer>
             </Section>
 
@@ -299,7 +306,7 @@ const ColTitle = styled.h3``;
 
 const HeroHeader = styled.div`
     background: linear-gradient(172deg, ${colors.primary} 60%, ${colors.primaryComp});
-    padding: 16px;
+    padding: 16px 0px;
     margin-top: 80px;
     width: 100%;
 `;
@@ -327,6 +334,7 @@ const HeroLeft = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding: 8px;
 `;
 
 const HeroRight = styled.div`

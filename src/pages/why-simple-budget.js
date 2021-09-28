@@ -5,7 +5,7 @@ import MainLayout from 'layouts/MainLayout';
 
 import { colors } from 'BaseTheme';
 
-export default function WhySimpleBudget({}) {
+export default function WhySimpleBudget() {
     return (
         <MainLayout>
             <Section>

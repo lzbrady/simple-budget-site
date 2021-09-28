@@ -6,7 +6,7 @@ import Button from 'components/Button';
 
 import { colors } from 'BaseTheme';
 
-export default function Contact({}) {
+export default function Contact() {
     return (
         <MainLayout>
             <Container>

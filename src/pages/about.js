@@ -4,16 +4,29 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import MainLayout from 'layouts/MainLayout';
 
+import { colors } from 'BaseTheme';
+
 export default function About({}) {
     return (
-        <MainLayout>
-            <Section>
-                <Title>About Simple Budget</Title>
+        <MainLayout
+            HeroComponent={
+                <HeroHeader>
+                    <HeroHeaderBG />
+                    <StaticImage alt="About Us" src="../../static/images/about.jpg" layout="fullWidth" height={128} />
 
+                    <HeroContentContainer>
+                        <HeroTitle>About Simple Budget</HeroTitle>
+                        <HeroSubtitle>(Founder Luke hiking in the Blue Ridge Mountains)</HeroSubtitle>
+                    </HeroContentContainer>
+                </HeroHeader>
+            }
+        >
+            <Section>
                 <Row>
-                    <TeamMember>
+                    <div>
                         <StaticImage alt="App Screenshot One" src="../../static/images/Pancakes.png" width={240} />
-                    </TeamMember>
+                        <Caption>Pancakes working on an early iteration</Caption>
+                    </div>
 
                     <Content>
                         <BodyText>
@@ -59,9 +72,57 @@ const BodyText = styled.p`
     display: inline-block;
 `;
 
+const Caption = styled.p`
+    margin: 0px;
+    color: ${colors.gray};
+    font-size: 12px;
+    text-align: center;
+`;
+
 const Content = styled.div`
     flex: 1;
     margin-left: 32px;
+`;
+
+const HeroHeaderBG = styled.div`
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: ${colors.gray};
+    z-index: 10;
+    opacity: 0.25;
+`;
+
+const HeroContentContainer = styled.div`
+    position: absolute;
+    left: 0px;
+    bottom: 0%;
+    right: 0px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(0deg, rgb(252, 255, 251) 0%, rgb(252, 255, 251, 75%) 60%, rgb(252, 255, 251, 0%));
+    opacity: 1;
+    z-index: 20;
+    padding-top: 32px;
+`;
+
+const HeroHeader = styled.div`
+    margin-top: 80px;
+    width: 100%;
+    position: relative;
+`;
+
+const HeroSubtitle = styled.p`
+    margin: 0px;
+    color: ${colors.gray};
+    font-size: 14px;
+`;
+
+const HeroTitle = styled.h1`
+    margin: 32px 0px 8px;
 `;
 
 const Row = styled.div`
@@ -75,11 +136,9 @@ const Section = styled.div`
 `;
 
 const Subtitle = styled.h3`
-    margin: 32px 0px 0px;
+    margin: 32px 0px 8px;
     font-size: 24px;
 `;
-
-const TeamMember = styled.div``;
 
 const Title = styled.h1`
     margin: 16px 0px 24px;

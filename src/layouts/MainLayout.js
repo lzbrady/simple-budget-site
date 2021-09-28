@@ -32,4 +32,6 @@ const ContentContainer = styled.main`
     padding-top: ${(props) => (props.addPadding ? '80px' : '0px')};
     padding-bottom: 40px;
     max-width: 960px;
+    flex: 1;
+    width: 100%;
 `;

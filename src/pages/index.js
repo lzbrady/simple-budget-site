@@ -148,10 +148,10 @@ const IndexPage = () => {
                 <Columns style={PowerfulInsightsStyle}>
                     <Col style={ScreenshotContainerStyle}>
                         <ScreenshotContainer style={ScreenshotLeftStyle}>
-                            <StaticImage alt="App Screenshot One" src="../../static/images/insights1.png" width={240} />
+                            <StaticImage alt="App Screenshot One" src="../../static/images/insights_one.png" width={240} />
                         </ScreenshotContainer>
                         <ScreenshotContainer style={ScreenshotRightStyle}>
-                            <StaticImage alt="App Screenshot Two" src="../../static/images/insights2.png" width={240} />
+                            <StaticImage alt="App Screenshot Two" src="../../static/images/insights_two.png" width={240} />
                         </ScreenshotContainer>
                     </Col>
                     <Col flex={2}>

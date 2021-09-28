@@ -62,11 +62,11 @@ const IndexPage = () => {
     const [premiumScreenshotIndex, setPremiumScreenshotIndex] = useState(0);
 
     useEffect(() => {
-        const unsubscribe = setInterval(() => {
+        const interval = setInterval(() => {
             setPremiumScreenshotIndex((prev) => (prev + 1 >= PremiumScreenshotImageNames.length ? 0 : prev + 1));
         }, 5000);
 
-        return unsubscribe;
+        return () => clearInterval(interval);
     }, []);
 
     const getPremiumScreenshot = useCallback(() => {
@@ -97,16 +97,16 @@ const IndexPage = () => {
 
                             <AppLinkContainer>
                                 <AppLink href="https://apps.apple.com/us/app/simple-budget-expense-tracker/id1560574926" target="_blank">
-                                    <StaticImage alt="Download on iOS" src="../../static/images/ios-download.png" height={44} />
+                                    <StaticImage alt="Download on iOS" src="../../static/images/ios_download.png" height={44} />
                                 </AppLink>
                                 <AppLink href="https://play.google.com/store/apps/details?id=com.pgmediasolutions.simplebudget" target="_blank">
-                                    <StaticImage alt="Download on Android" src="../../static/images/android-download.png" height={44} />
+                                    <StaticImage alt="Download on Android" src="../../static/images/android_download.png" height={44} />
                                 </AppLink>
                             </AppLinkContainer>
                         </HeroLeft>
 
                         <HeroRight>
-                            <StaticImage alt="Simple Budget Screenshot" src="../../static/images/transactions-screenshot.png" width={240} />
+                            <StaticImage alt="Simple Budget Screenshot" src="../../static/images/transactions_screenshot.png" width={240} />
                         </HeroRight>
                     </HeroContentContainer>
                 </HeroHeader>
@@ -120,8 +120,8 @@ const IndexPage = () => {
                         <CategoryIcon fill={colors.primary} width={50} height={50} />
                         <ColTitle>Categorize Your Spending</ColTitle>
                         <BodyText>
-                            This goes beyond assigning transactions to categories for the sake of cool graphs. You also specify an amount you plan to spend on each category, and it is up to you to
-                            stick to that amount.
+                            Categorize your transactions for easily digestible graphs and visuals regarding your spending. Map out how much to spend in a category to keep yourself accountable
+                            throughout the month.
                         </BodyText>
                     </Col>
                     <ColDivider />
@@ -129,8 +129,7 @@ const IndexPage = () => {
                         <TransactionIcon fill={colors.primary} width={50} height={50} />
                         <ColTitle>Add Your Transactions</ColTitle>
                         <BodyText>
-                            Each time you spend money on something, you should add it to your budget app. Simple Budget makes no judgments on spending habits, and it is important all of your
-                            transactions are added so your budget is accurate.
+                            Simple Budget makes no judgments on spending habits. Adding all of your transactions will allow you to see accurate and informative insights about your spending.
                         </BodyText>
                     </Col>
                     <ColDivider />
@@ -138,8 +137,8 @@ const IndexPage = () => {
                         <InsightIcon fill={colors.primary} width={50} height={50} />
                         <ColTitle>Learn From Insights</ColTitle>
                         <BodyText>
-                            Simple Budget requires effort from you, but once you start using it, you get to experience the insights it can provide. You will have absolute clarity on your financial
-                            position.
+                            Experience absolute clarity on your financial position with Simple Budget. Insights will help you see where your'e spending your money, where you can cut back, and other
+                            opportunities to save.
                         </BodyText>
                     </Col>
                 </Columns>
@@ -158,7 +157,7 @@ const IndexPage = () => {
                     <Col flex={2}>
                         <Title>Experience Powerful Insights</Title>
                         <ScreenshotDesc>
-                            You need to save money, but don't know where you can cut back on spending. Never experience this dilemma again with the power of Simple Budget insights.
+                            You need to save money, but don't know where the money will come from. Never experience this dilemma again with the power of Simple Budget insights.
                         </ScreenshotDesc>
                         <Button style={ButtonStyle} text="Learn More" to="why-simple-budget" />
                     </Col>

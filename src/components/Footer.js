@@ -18,10 +18,10 @@ export default function Footer() {
 
             <AppLinkContainer>
                 <AppLink href="https://apps.apple.com/us/app/simple-budget-expense-tracker/id1560574926" target="_blank">
-                    <StaticImage alt="Download on iOS" src="../../static/images/ios-download.png" height={44} />
+                    <StaticImage alt="Download on iOS" src="../../static/images/ios_download.png" height={44} />
                 </AppLink>
                 <AppLink href="https://play.google.com/store/apps/details?id=com.pgmediasolutions.simplebudget" target="_blank">
-                    <StaticImage alt="Download on Android" src="../../static/images/android-download.png" height={44} />
+                    <StaticImage alt="Download on Android" src="../../static/images/android_download.png" height={44} />
                 </AppLink>
             </AppLinkContainer>
         </Container>

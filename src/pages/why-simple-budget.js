@@ -12,6 +12,21 @@ export default function WhySimpleBudget({}) {
                 <Title>Why Simple Budget</Title>
 
                 <BodyText>
+                    Simple Budget will help you achieve your financial goals. Sounds a bit generic, right? We'd love to tell you exactly how Simple Budget will help you, but everyone's financial goals
+                    are different. You may want to spend less on a specific category, increase overall savings, eliminate debt, or have an entirely different financial goal! Regardless of your goals,
+                    Simple Budget will be the tool to help you achieve them.
+                </BodyText>
+
+                <BodyText>
+                    So what are you hoping to achieve? However big or small, it's going to take hard work. SImple Budget will keep you on track and give you all the information you need to succeed. At
+                    the end of the day though, it doesn't spend your money for you. It's up to you to take control of your own finances!
+                </BodyText>
+
+                <Divider />
+
+                <Title>How Simple Budget Helps</Title>
+
+                <BodyText>
                     We strive to deliver the highest possible return on investment to our users. While we're not an investment app, you do invest your time into your budget, and it should work for you
                     in return. To us, this means a few things.
                 </BodyText>
@@ -60,6 +75,13 @@ export default function WhySimpleBudget({}) {
 const BodyText = styled.p`
     margin: 0px 0px 16px;
     display: inline-block;
+`;
+
+const Divider = styled.div`
+    height: 1px;
+    width: 60%;
+    background-color: ${colors.lightGray};
+    margin: 64px auto;
 `;
 
 const Reason = styled.div`

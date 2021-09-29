@@ -11,6 +11,9 @@ export default function Contact() {
         <MainLayout>
             <Container>
                 <FormContainer>
+                    <Title>Contact Us</Title>
+                    <Note>Please note, if you're contacting us in regards to your account, providing your account phone number will help speed up the process.</Note>
+
                     <Form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact" />
                         <input type="hidden" name="bot-field" />
@@ -33,11 +36,11 @@ export default function Contact() {
                             <InputGroup>
                                 <StyledLabel>
                                     Message
-                                    <StyledTextArea type="text" name="message" />
+                                    <StyledTextArea rows={7} type="text" name="message" />
                                 </StyledLabel>
                             </InputGroup>
 
-                            <Button rows={7} text="Submit" style={{ margin: '40px auto 0px' }} />
+                            <SubmitButton>Submit</SubmitButton>
                         </FormContent>
                     </Form>
                 </FormContainer>
@@ -68,6 +71,21 @@ const FormContent = styled.div`
     flex-direction: column;
 `;
 
+const InputGroup = styled.div`
+    display: flex;
+    flex-direction: row;
+    grid-gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+`;
+
+const Note = styled.p`
+    text-align: center;
+    font-size: 12px;
+    color: ${colors.gray};
+    margin: 8px 0px 16px;
+`;
+
 const StyledInput = styled((props) => <input {...props} />)`
     background-color: ${colors.offWhite};
     border: none;
@@ -96,10 +114,23 @@ const StyledTextArea = styled((props) => <textarea {...props} />)`
     resize: vertical;
 `;
 
-const InputGroup = styled.div`
-    display: flex;
-    flex-direction: row;
-    grid-gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+const SubmitButton = styled.button`
+    background-color: ${colors.accent};
+    color: ${colors.white};
+    padding: 16px 32px;
+    border-radius: 32px;
+    text-decoration: none;
+    margin: 40px auto 0px;
+    border: none;
+    font-size: 18px;
+
+    :hover {
+        cursor: pointer;
+        background-color: ${colors.accentHover};
+    }
+`;
+
+const Title = styled.h1`
+    text-align: center;
+    margin: 0px;
 `;

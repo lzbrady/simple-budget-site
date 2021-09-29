@@ -2,12 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 import MainLayout from 'layouts/MainLayout';
+import SEO from 'components/seo';
 
 import { colors } from 'BaseTheme';
 
 export default function WhySimpleBudget() {
     return (
         <MainLayout>
+            <SEO title="Why" keywords={[`budget`, `simple budget`, `budget app`, `money management`, `financial freedom`, `mint alternative`, `why simple budget`]} />
+
             <Section>
                 <Title>Why Simple Budget</Title>
 

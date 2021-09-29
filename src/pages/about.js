@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import MainLayout from 'layouts/MainLayout';
+import SEO from 'components/seo';
 
 import { colors } from 'BaseTheme';
 
@@ -20,6 +21,8 @@ export default function About() {
                 </HeroHeader>
             }
         >
+            <SEO title="About" keywords={[`budget`, `simple budget`, `budget app`, `money management`, `financial freedom`, `mint alternative`, `about simple budget`]} />
+
             <Section>
                 <Title>About Simple Budget</Title>
 

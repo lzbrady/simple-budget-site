@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import MainLayout from 'layouts/MainLayout';
 import Button from 'components/Button';
+import SEO from 'components/seo';
 
 import { colors } from 'BaseTheme';
 import CategoryIcon from '@icons/category.svg';
@@ -112,7 +113,7 @@ const IndexPage = () => {
                 </HeroHeader>
             }
         >
-            <title>Home | Simple Budget</title>
+            <SEO title="Home" keywords={[`budget`, `simple budget`, `budget app`, `money management`, `financial freedom`, `mint alternative`]} />
 
             <Section marginTop={16}>
                 <Columns alignTop>

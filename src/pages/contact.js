@@ -2,13 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 import MainLayout from 'layouts/MainLayout';
-import Button from 'components/Button';
+import SEO from 'components/seo';
 
 import { colors } from 'BaseTheme';
 
 export default function Contact() {
     return (
         <MainLayout>
+            <SEO title="Contact" keywords={[`budget`, `simple budget`, `budget app`, `money management`, `financial freedom`, `mint alternative`, `contact simple budget`, `simple budget support`]} />
+
             <Container>
                 <FormContainer>
                     <Title>Contact Us</Title>

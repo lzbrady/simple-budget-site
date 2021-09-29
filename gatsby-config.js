@@ -1,7 +1,9 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: 'https://www.yourdomain.tld',
         title: 'Simple Budget',
+        description: 'Simple Budget opens up the possibility for financial freedom to everyone. Simplify your budget. Know your spending. Grow your savings.',
+        url: 'https://www.gosimplebudget.com', // No trailing slash allowed!
+        image: '/images/LogoTransparent.png', // Path to your image you placed in the 'static' folder
     },
     plugins: [
         'gatsby-plugin-styled-components',

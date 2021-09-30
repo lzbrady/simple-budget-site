@@ -24,6 +24,10 @@ export default function Footer() {
                     <StaticImage alt="Download on Android" src="../../static/images/android_download.png" height={44} />
                 </AppLink>
             </AppLinkContainer>
+
+            <SubLinks>
+                <SubLink to="/privacy-policy">Privacy Policy</SubLink>
+            </SubLinks>
         </Container>
     );
 }
@@ -56,7 +60,6 @@ const Container = styled.div`
 
 const FooterLink = styled((props) => <Link {...props} />)`
     text-decoration: none;
-    text-decoration: none;
     margin: 0px 8px;
     padding: 4px 8px;
     text-align: center;
@@ -67,6 +70,25 @@ const FooterLink = styled((props) => <Link {...props} />)`
         color: ${colors.accentHover};
         text-decoration: underline;
     }
+`;
+
+const SubLink = styled((props) => <Link {...props} />)`
+    text-decoration: none;
+    margin: 0px 8px;
+    padding: 4px 8px;
+    text-align: center;
+    color: ${colors.gray};
+
+    :hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+`;
+
+const SubLinks = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 `;
 
 const Trademark = styled.p`

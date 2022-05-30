@@ -66,8 +66,10 @@ export default function Download({}) {
 
       <SectionDivider />
 
-      <FootNote>How will you save?</FootNote>
-      <FootNote>Start by downloading today.</FootNote>
+      <Footer>
+        <FootNote>How will you save?</FootNote>
+        <FootNote>Start by downloading today.</FootNote>
+      </Footer>
     </MainLayout>
   );
 }
@@ -115,6 +117,10 @@ const ColTitle = styled.h3``;
 const DownloadContainer = styled.div`
   background: linear-gradient(136deg, #7ace95 50%, #46c3c1);
   padding: 16px 8px;
+`;
+
+const Footer = styled.div`
+  margin: 32px;
 `;
 
 const FootNote = styled.p`

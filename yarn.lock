@@ -7528,6 +7528,21 @@ gatsby-parcel-config@1.13.1:
     "@parcel/transformer-js" "2.8.3"
     "@parcel/transformer-json" "2.8.3"
 
+gatsby-plugin-decap-cms@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-decap-cms/-/gatsby-plugin-decap-cms-4.0.4.tgz#288fe8b370e71a14edb4fe838af2f4b642b86fb2"
+  integrity sha512-t3A9siOWYsvQV0p1uC4xI9MKejRXGGUgs2m+cgLvyXGINTysx9PLgYUMZVrpCmJ3jPzxnq+ybyZzPj9e1pvFRw==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+    "@soda/friendly-errors-webpack-plugin" "1.8.1"
+    copy-webpack-plugin "^7.0.0"
+    html-webpack-plugin "^5.5.3"
+    html-webpack-skip-assets-plugin "^1.0.3"
+    html-webpack-tags-plugin "^3.0.2"
+    lodash "^4.17.21"
+    mini-css-extract-plugin "1.6.2"
+    netlify-identity-widget "^1.9.2"
+
 gatsby-plugin-google-fonts@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-1.0.1.tgz#d71054f7bf207b9a8da227380369e18e6f4e0201"
@@ -7557,21 +7572,6 @@ gatsby-plugin-module-resolver@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-module-resolver/-/gatsby-plugin-module-resolver-1.0.3.tgz#d98d0b51b5b99aa40db3382f6b5c049ca3018f01"
   integrity sha512-MrE2JhDEiiZB6uLVJ0zpoZmHi36zkgGoNgBr9YQ4r6TUqayiNXU97NBhO87CRJQz8I4MaL6ZrOWjUdoHEXvndg==
-
-gatsby-plugin-netlify-cms@^7.12.1:
-  version "7.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-7.12.1.tgz#b42c77c43d18e5e8faf70ce6c59fb030cd9d0cef"
-  integrity sha512-212zvouWh5RxwvQQyEb0VM45zS6DeUWohMNHYXy3WONnA94TK2TSViwIfhzF/g9ZzyDcJcMLjELrGiV1SK3HyA==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    "@soda/friendly-errors-webpack-plugin" "1.8.1"
-    copy-webpack-plugin "^7.0.0"
-    html-webpack-plugin "^5.5.3"
-    html-webpack-skip-assets-plugin "^1.0.3"
-    html-webpack-tags-plugin "^3.0.2"
-    lodash "^4.17.21"
-    mini-css-extract-plugin "1.6.2"
-    netlify-identity-widget "^1.9.2"
 
 gatsby-plugin-page-creator@^5.13.1:
   version "5.13.1"

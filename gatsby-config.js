@@ -7,7 +7,12 @@ module.exports = {
     image: "/images/LogoTransparent.png", // Path to your image you placed in the 'static' folder
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
+    {
+      resolve: `gatsby-plugin-decap-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
@@ -20,6 +25,13 @@ module.exports = {
         path: `${__dirname}/static/images`,
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
     },
     {
       resolve: "gatsby-plugin-react-svg",

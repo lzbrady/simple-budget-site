@@ -3,7 +3,7 @@ module.exports = {
     title: "Simple Budget",
     description:
       "Simple Budget opens up the possibility for financial freedom to everyone. Simplify your budget. Know your spending. Grow your savings.",
-    url: "https://www.gosimplebudget.com", // No trailing slash allowed!
+    siteUrl: "https://www.gosimplebudget.com", // No trailing slash allowed!
     image: "/images/LogoTransparent.png", // Path to your image you placed in the 'static' folder
   },
   plugins: [
@@ -15,7 +15,6 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

@@ -28,7 +28,6 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-module-resolver": "^1.0.3",
-    "gatsby-plugin-react-helmet": "^6.13.1",
     "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-styled-components": "^6.13.1",
@@ -36,7 +35,6 @@
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-move": "^6.5.0",
     "styled-components": "^6.1.8"
   }

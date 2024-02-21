@@ -12,7 +12,7 @@ import InsightIcon from "@icons/insight.svg";
 import TransactionIcon from "@icons/transaction.svg";
 
 const ButtonStyle = {
-  marginTop: "16px",
+  $marginTop: "16px",
 };
 
 const BubbleSectionStyle = {
@@ -58,13 +58,20 @@ const StatsContainerStyle = {
   marginTop: "32px",
 };
 
-const PremiumScreenshotImageNames = ["Annual_Savings.png", "Categories_Overview.png", "Category_Details.png", "Budget_Calculator.png"];
+const PremiumScreenshotImageNames = [
+  "Annual_Savings.png",
+  "Categories_Overview.png",
+  "Category_Details.png",
+  "Budget_Calculator.png",
+];
 const IndexPage = () => {
   const [premiumScreenshotIndex, setPremiumScreenshotIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPremiumScreenshotIndex((prev) => (prev + 1 >= PremiumScreenshotImageNames.length ? 0 : prev + 1));
+      setPremiumScreenshotIndex((prev) =>
+        prev + 1 >= PremiumScreenshotImageNames.length ? 0 : prev + 1
+      );
     }, 5000);
 
     return () => clearInterval(interval);
@@ -74,14 +81,19 @@ const IndexPage = () => {
     switch (premiumScreenshotIndex) {
       case 0:
         return (
-          <StaticImage style={PremiumScreenshotStyle} alt='Premium Screenshot One' src='../../static/images/premium/Annual_Savings.png' width={240} />
+          <StaticImage
+            style={PremiumScreenshotStyle}
+            alt="Premium Screenshot One"
+            src="../../static/images/premium/Annual_Savings.png"
+            width={240}
+          />
         );
       case 1:
         return (
           <StaticImage
             style={PremiumScreenshotStyle}
-            alt='Premium Screenshot One'
-            src='../../static/images/premium/Categories_Overview.png'
+            alt="Premium Screenshot One"
+            src="../../static/images/premium/Categories_Overview.png"
             width={240}
           />
         );
@@ -89,8 +101,8 @@ const IndexPage = () => {
         return (
           <StaticImage
             style={PremiumScreenshotStyle}
-            alt='Premium Screenshot One'
-            src='../../static/images/premium/Category_Details.png'
+            alt="Premium Screenshot One"
+            src="../../static/images/premium/Category_Details.png"
             width={240}
           />
         );
@@ -98,14 +110,19 @@ const IndexPage = () => {
         return (
           <StaticImage
             style={PremiumScreenshotStyle}
-            alt='Premium Screenshot One'
-            src='../../static/images/premium/Budget_Calculator.png'
+            alt="Premium Screenshot One"
+            src="../../static/images/premium/Budget_Calculator.png"
             width={240}
           />
         );
       default:
         return (
-          <StaticImage style={PremiumScreenshotStyle} alt='Premium Screenshot One' src='../../static/images/premium/Annual_Savings.png' width={240} />
+          <StaticImage
+            style={PremiumScreenshotStyle}
+            alt="Premium Screenshot One"
+            src="../../static/images/premium/Annual_Savings.png"
+            width={240}
+          />
         );
     }
   }, [premiumScreenshotIndex]);
@@ -122,31 +139,48 @@ const IndexPage = () => {
               </HeroTitleContainer>
 
               <AppLinkContainer>
-                <AppLink href='https://apps.apple.com/us/app/simple-budget-expense-tracker/id1560574926' target='_blank'>
-                  <StaticImage alt='Download on iOS' src='../../static/images/ios_download.png' height={44} />
+                <AppLink
+                  href="https://apps.apple.com/us/app/simple-budget-expense-tracker/id1560574926"
+                  target="_blank"
+                >
+                  <StaticImage
+                    alt="Download on iOS"
+                    src="../../static/images/ios_download.png"
+                    height={44}
+                  />
                 </AppLink>
-                <AppLink href='https://play.google.com/store/apps/details?id=com.pgmediasolutions.simplebudget' target='_blank'>
-                  <StaticImage alt='Download on Android' src='../../static/images/android_download.png' height={44} />
+                <AppLink
+                  href="https://play.google.com/store/apps/details?id=com.pgmediasolutions.simplebudget"
+                  target="_blank"
+                >
+                  <StaticImage
+                    alt="Download on Android"
+                    src="../../static/images/android_download.png"
+                    height={44}
+                  />
                 </AppLink>
               </AppLinkContainer>
             </HeroLeft>
 
             <HeroRight>
-              <StaticImage alt='Simple Budget Screenshot' src='../../static/images/transactions_screenshot.png' width={240} />
+              <StaticImage
+                alt="Simple Budget Screenshot"
+                src="../../static/images/transactions_screenshot.png"
+                width={240}
+              />
             </HeroRight>
           </HeroContentContainer>
         </HeroHeader>
       }
     >
-      <SEO title='Home' keywords={[`budget`, `simple budget`, `budget app`, `money management`, `financial freedom`, `mint alternative`]} />
-
-      <Section marginTop={16}>
-        <Columns alignTop>
+      <Section $marginTop={16}>
+        <Columns $alignTop={true}>
           <Col>
             <CategoryIcon fill={colors.primary} width={50} height={50} />
             <ColTitle>Categorize Your Spending</ColTitle>
             <BodyText>
-              How have you been spending your money each month? The best place to start saving is by knowing how you are currently spending your
+              How have you been spending your money each month? The best place
+              to start saving is by knowing how you are currently spending your
               money.
             </BodyText>
           </Col>
@@ -155,8 +189,9 @@ const IndexPage = () => {
             <TransactionIcon fill={colors.primary} width={50} height={50} />
             <ColTitle>Add Your Transactions</ColTitle>
             <BodyText>
-              Tracking your transactions will allow you to see accurate and informative insights about your spending, and highlight area where you're
-              spending the most.
+              Tracking your transactions will allow you to see accurate and
+              informative insights about your spending, and highlight area where
+              you're spending the most.
             </BodyText>
           </Col>
           <ColDivider />
@@ -164,8 +199,9 @@ const IndexPage = () => {
             <InsightIcon fill={colors.primary} width={50} height={50} />
             <ColTitle>Learn From Insights</ColTitle>
             <BodyText>
-              Understand your financial situation with Simple Budget. Insights will help you see where your'e spending your money, where you can cut
-              back, and other opportunities to save.
+              Understand your financial situation with Simple Budget. Insights
+              will help you see where your'e spending your money, where you can
+              cut back, and other opportunities to save.
             </BodyText>
           </Col>
         </Columns>
@@ -175,19 +211,32 @@ const IndexPage = () => {
         <Columns style={PowerfulInsightsStyle}>
           <Col style={ScreenshotContainerStyle}>
             <ScreenshotContainer style={ScreenshotLeftStyle}>
-              <StaticImage alt='App Screenshot One' src='../../static/images/insights_one.png' width={240} />
+              <StaticImage
+                alt="App Screenshot One"
+                src="../../static/images/insights_one.png"
+                width={240}
+              />
             </ScreenshotContainer>
             <ScreenshotContainer style={ScreenshotRightStyle}>
-              <StaticImage alt='App Screenshot Two' src='../../static/images/insights_two.png' width={240} />
+              <StaticImage
+                alt="App Screenshot Two"
+                src="../../static/images/insights_two.png"
+                width={240}
+              />
             </ScreenshotContainer>
           </Col>
           <Col flex={2}>
             <Title>Experience Powerful Insights</Title>
             <ScreenshotDesc>
-              You need to save money, but don't know where the money will come from. Never experience this dilemma again with the power of Simple
+              You need to save money, but don't know where the money will come
+              from. Never experience this dilemma again with the power of Simple
               Budget insights.
             </ScreenshotDesc>
-            <Button style={ButtonStyle} text='Learn More' to='why-simple-budget' />
+            <Button
+              style={ButtonStyle}
+              text="Learn More"
+              to="why-simple-budget"
+            />
           </Col>
         </Columns>
       </Section>
@@ -196,10 +245,13 @@ const IndexPage = () => {
         <PremiumContainer>
           <PremiumContent>
             <Title>Premium Insights</Title>
-            <BodyText>Unlock powerful insights for only $1/month. Because keeping a budget shouldn't be another expense.</BodyText>
+            <BodyText>
+              Unlock powerful insights for only $1/month. Because keeping a
+              budget shouldn't be another expense.
+            </BodyText>
 
             <PricingContainer>
-              <Pricing borderRight>
+              <Pricing $borderRight>
                 <Price>$1 / month</Price>
               </Pricing>
               <Pricing>
@@ -209,48 +261,83 @@ const IndexPage = () => {
 
             <PremiumList>
               <PremiumListItem>View your full budget history</PremiumListItem>
-              <PremiumListItem>Watch your savings grow every month</PremiumListItem>
-              <PremiumListItem>Get a breakdown of spending by category</PremiumListItem>
-              <PremiumListItem>Get a further breakdown of each category</PremiumListItem>
-              <PremiumListItem>Budget Calculator: See exactly how your finances will look at the end of the month</PremiumListItem>
-              <PremiumListItem>Be on the lookout for new features added!</PremiumListItem>
+              <PremiumListItem>
+                Watch your savings grow every month
+              </PremiumListItem>
+              <PremiumListItem>
+                Get a breakdown of spending by category
+              </PremiumListItem>
+              <PremiumListItem>
+                Get a further breakdown of each category
+              </PremiumListItem>
+              <PremiumListItem>
+                Budget Calculator: See exactly how your finances will look at
+                the end of the month
+              </PremiumListItem>
+              <PremiumListItem>
+                Be on the lookout for new features added!
+              </PremiumListItem>
             </PremiumList>
 
             <BasicTitle>Not Ready for Premium?</BasicTitle>
             <BodyText>
-              No worries, non premium accounts can still use the full app. Unlike other budgeting apps, premium access is focused on insights, not
-              usability. No limits on categories, transactions, or any other data you input.
+              No worries, non premium accounts can still use the full app.
+              Unlike other budgeting apps, premium access is focused on
+              insights, not usability. No limits on categories, transactions, or
+              any other data you input.
             </BodyText>
           </PremiumContent>
 
-          <PremiumScreenshotContainer>{getPremiumScreenshot()}</PremiumScreenshotContainer>
+          <PremiumScreenshotContainer>
+            {getPremiumScreenshot()}
+          </PremiumScreenshotContainer>
         </PremiumContainer>
       </Section>
 
-      <Section style={BubbleSectionStyle} backgroundColor={colors.primary}>
+      <Section style={BubbleSectionStyle} $backgroundColor={colors.primary}>
         <ReasonsContainer>
           <ReasonTitleContainer>
-            <TitleLight style={BubbleTitleStyle}>How Would a Budget Help Me?</TitleLight>
+            <TitleLight style={BubbleTitleStyle}>
+              How Would a Budget Help Me?
+            </TitleLight>
           </ReasonTitleContainer>
 
           <ReasonsWrapper>
-            <Reason>Become more aware of how much money you're actually making each month</Reason>
-            <Reason>Know exactly how, and where, you're spending the money you earn</Reason>
+            <Reason>
+              Become more aware of how much money you're actually making each
+              month
+            </Reason>
+            <Reason>
+              Know exactly how, and where, you're spending the money you earn
+            </Reason>
             <Reason>Identify areas you're over-spending</Reason>
             <Reason>Know how you can adjust your spending habits</Reason>
-            <Reason>Determine how much you can put towards savings by building it right into your budget</Reason>
-            <Reason>Build stronger financial independence by taking control of your own money</Reason>
+            <Reason>
+              Determine how much you can put towards savings by building it
+              right into your budget
+            </Reason>
+            <Reason>
+              Build stronger financial independence by taking control of your
+              own money
+            </Reason>
           </ReasonsWrapper>
 
-          <Button inverse style={ButtonStyle} text='See More' to='why-simple-budget' />
+          <Button
+            inverse
+            style={ButtonStyle}
+            text="See More"
+            to="why-simple-budget"
+          />
         </ReasonsContainer>
       </Section>
 
-      <Section marginTop={80}>
+      <Section $marginTop={80}>
         <Title>Take Control of Your Finances</Title>
         <BodyText>
-          Living paycheck to paycheck? Worried about making rent or other bills? You're not alone. Imagine instead of being one of these statistics,
-          you had a plan for every dollar you spend. Instead of worrying about how much you spent last weekend, you knew how much you could afford to
+          Living paycheck to paycheck? Worried about making rent or other bills?
+          You're not alone. Imagine instead of being one of these statistics,
+          you had a plan for every dollar you spend. Instead of worrying about
+          how much you spent last weekend, you knew how much you could afford to
           spend this weekend.
         </BodyText>
 
@@ -272,7 +359,9 @@ const IndexPage = () => {
           </StatContainer>
           <StatContainer>
             <StatNumber>64%</StatNumber>
-            <StatDesc>Americans who site money as a significant source of stress</StatDesc>
+            <StatDesc>
+              Americans who site money as a significant source of stress
+            </StatDesc>
             <StatCitation>[3]</StatCitation>
           </StatContainer>
           <StatContainer>
@@ -283,14 +372,22 @@ const IndexPage = () => {
 
         <StatsSourceContainer>
           <StatsSource>Sources (2021)</StatsSource>
-          <StatsSource>[1] https://www.debt.org/faqs/americans-in-debt/</StatsSource>
-          <StatsSource>[2] https://www.debt.org/faqs/americans-in-debt/demographics/</StatsSource>
-          <StatsSource>[3] https://www.debt.org/advice/good-vs-bad/</StatsSource>
+          <StatsSource>
+            [1] https://www.debt.org/faqs/americans-in-debt/
+          </StatsSource>
+          <StatsSource>
+            [2] https://www.debt.org/faqs/americans-in-debt/demographics/
+          </StatsSource>
+          <StatsSource>
+            [3] https://www.debt.org/advice/good-vs-bad/
+          </StatsSource>
         </StatsSourceContainer>
       </Section>
     </MainLayout>
   );
 };
+
+export const Head = () => <SEO />;
 
 const AppLink = styled.a`
   margin: 0px 8px;
@@ -310,7 +407,7 @@ const Columns = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: ${(props) => (props.alignTop ? "flex-start" : "center")};
+  align-items: ${(props) => (props.$alignTop ? "flex-start" : "center")};
 `;
 
 const Col = styled.div`
@@ -333,7 +430,11 @@ const ColDivider = styled.div`
 const ColTitle = styled.h3``;
 
 const HeroHeader = styled.div`
-  background: linear-gradient(172deg, ${colors.primary} 60%, ${colors.primaryComp});
+  background: linear-gradient(
+    172deg,
+    ${colors.primary} 60%,
+    ${colors.primaryComp}
+  );
   padding: 16px 0px;
   margin-top: 80px;
   width: 100%;
@@ -413,7 +514,8 @@ const Pricing = styled.div`
   flex: 1;
   padding: 16px 0px;
   text-align: center;
-  border-right: ${(props) => (props.borderRight ? `1px solid ${colors.primaryComp}` : "none")};
+  border-right: ${(props) =>
+    props.$borderRight ? `1px solid ${colors.primaryComp}` : "none"};
 `;
 
 const Price = styled.h3`
@@ -464,8 +566,9 @@ const ScreenshotDesc = styled.h3`
 `;
 
 const Section = styled.div`
-  margin-top: ${(props) => (props.marginTop ? `${props.marginTop}px` : "64px")};
-  background-color: ${(props) => props.backgroundColor};
+  margin-top: ${(props) =>
+    props.$marginTop ? `${props.$marginTop}px` : "64px"};
+  background-color: ${(props) => props.$backgroundColor};
   padding: 16px;
 `;
 

@@ -61,7 +61,7 @@ const MenuButton = styled.button`
     justify-content: center;
     margin: 0px 16px;
 
-    :hover {
+    &:hover {
         cursor: pointer;
         background-color: rgba(255, 255, 255, 0.3);
     }

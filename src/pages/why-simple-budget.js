@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import MainLayout from "layouts/MainLayout";
-import SEO from "components/seo";
+import Seo from "components/seo";
 
 import { colors } from "BaseTheme";
 
@@ -98,7 +98,7 @@ export default function WhySimpleBudget() {
 }
 
 export const Head = () => (
-  <SEO
+  <Seo
     title="Why Simple Budget"
     description="Overwhelmed by finances? Not sure where all your money is going? Want to start saving more? This article will outline how Simple Budget helps you achieve your financial goals."
   />

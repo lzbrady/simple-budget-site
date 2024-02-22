@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import MainLayout from "layouts/MainLayout";
-import SEO from "components/seo";
+import Seo from "components/seo";
 
 export default function PrivacyPolicy() {
   return (
@@ -211,7 +211,7 @@ export default function PrivacyPolicy() {
 }
 
 export const Head = () => (
-  <SEO
+  <Seo
     title="Privacy Policy"
     description="Read Simple Budget's privacy policy. Download Simple Budget today to kickstart your budgeting journey."
   />

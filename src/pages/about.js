@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
 import MainLayout from "layouts/MainLayout";
-import SEO from "components/seo";
+import Seo from "components/seo";
 
 export default function About() {
   return (
@@ -74,7 +74,7 @@ export default function About() {
 }
 
 export const Head = () => (
-  <SEO
+  <Seo
     title="About"
     description="Come check out what Simple Budget is, and how it can help you on your budgeting journey. Spoiler alert: it is a budgeting tool designed to help you gain insights into your spending, and start increasing your savings."
   />

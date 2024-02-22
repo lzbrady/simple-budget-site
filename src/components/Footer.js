@@ -65,7 +65,7 @@ const FooterLink = styled((props) => <Link {...props} />)`
     text-align: center;
     color: ${colors.accent};
 
-    :hover {
+    &:hover {
         cursor: pointer;
         color: ${colors.accentHover};
         text-decoration: underline;
@@ -79,7 +79,7 @@ const SubLink = styled((props) => <Link {...props} />)`
     text-align: center;
     color: ${colors.gray};
 
-    :hover {
+    &:hover {
         cursor: pointer;
         text-decoration: underline;
     }

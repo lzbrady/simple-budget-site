@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import MainLayout from "layouts/MainLayout";
 import Button from "components/Button";
-import SEO from "components/seo";
+import Seo from "components/seo";
 
 import { colors } from "BaseTheme";
 import CategoryIcon from "@icons/category.svg";
@@ -12,7 +12,7 @@ import InsightIcon from "@icons/insight.svg";
 import TransactionIcon from "@icons/transaction.svg";
 
 const ButtonStyle = {
-  $marginTop: "16px",
+  marginTop: "16px",
 };
 
 const BubbleSectionStyle = {
@@ -387,7 +387,7 @@ const IndexPage = () => {
   );
 };
 
-export const Head = () => <SEO />;
+export const Head = () => <Seo />;
 
 const AppLink = styled.a`
   margin: 0px 8px;

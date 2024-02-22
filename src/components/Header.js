@@ -35,7 +35,7 @@ export default function Header() {
       <Menu $isExpanded={isMenuExpanded}>
         <MenuItemLink to="/about">About</MenuItemLink>
         <MenuItemLink to="/why-simple-budget">Why Simple Budget</MenuItemLink>
-        <MenuItemLink to="/blog">Blog</MenuItemLink>
+        {/* <MenuItemLink to="/blog">Blog</MenuItemLink> */}
         <MenuItemLink to="/contact">Contact</MenuItemLink>
       </Menu>
     </Container>
@@ -102,7 +102,7 @@ const MenuItemLink = styled((props) => <Link {...props} />)`
   color: ${colors.accent};
   border-bottom: 1px solid transparent;
 
-  :hover {
+  &:hover {
     border-color: ${colors.accent};
   }
 `;
@@ -141,7 +141,7 @@ const TitleContainer = styled.div`
   margin: 0px 20px;
   border-bottom: 1px solid ${colors.white};
 
-  :hover {
+  &:hover {
     border-bottom-color: ${colors.primary};
   }
 `;

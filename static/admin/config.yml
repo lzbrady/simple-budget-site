@@ -2,22 +2,37 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/images/uploads
+public_folder: /images/uploads
+
+site_url: https://www.gosimplebudget.com
+logo_url: https://appetizers.s3.amazonaws.com/simple-budget/Simple_Budget_Logo_512x512.png # logo_url is assumed to be a URL to an image file
 
 collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug: "index"
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    # path: "{{slug}}/index"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}/index"
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" } # all collections with create: true must have a title field (a different field can be used via identifier_field)
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Cover Image",
+          name: "cover_image",
+          widget: "image",
+          required: false,
+          allow_multiple: false,
+          media_library:
+            config:
+              multiple: false
+              max_file_size: 512000 # in bytes, only for default media library
+
+        }
       - { label: "Body", name: "body", widget: "markdown" }

@@ -4,7 +4,7 @@ import { useLocation } from "@reach/router";
 
 import { useSiteMetadata } from "hooks/useSiteMetadata";
 
-const SEO = ({ title, description, icon, image, children }) => {
+const Seo = ({ title, description, icon, image, children }) => {
   const { pathname } = useLocation();
 
   const {
@@ -33,16 +33,16 @@ const SEO = ({ title, description, icon, image, children }) => {
   );
 };
 
-export default SEO;
+export default Seo;
 
-SEO.propTypes = {
+Seo.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
 };
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   title: null,
   description: null,
   image: null,

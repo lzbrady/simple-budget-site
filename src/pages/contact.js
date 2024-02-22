@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import MainLayout from "layouts/MainLayout";
-import SEO from "components/seo";
+import Seo from "components/seo";
 
 import { colors } from "BaseTheme";
 
@@ -58,7 +58,7 @@ export default function Contact() {
 }
 
 export const Head = () => (
-  <SEO
+  <Seo
     title="Contact"
     description="Contact the Simple Budget team. We are here to answer any questions you may have and provide technical support. Please don't hesitate to reach out today."
   />
@@ -139,7 +139,7 @@ const SubmitButton = styled.button`
   border: none;
   font-size: 18px;
 
-  :hover {
+  &:hover {
     cursor: pointer;
     background-color: ${colors.accentHover};
   }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
 import MainLayout from "layouts/MainLayout";
-import SEO from "components/seo";
+import Seo from "components/seo";
 
 import { colors } from "BaseTheme";
 import CategoryIcon from "@icons/category.svg";
@@ -88,7 +88,7 @@ export default function Download() {
 }
 
 export const Head = () => (
-  <SEO
+  <Seo
     title="Download"
     description="Download Simple Budget today to kickstart your budgeting journey. Find out how Simple Budget guides you to save more with intuitive charts, figures, insights, and more."
   />

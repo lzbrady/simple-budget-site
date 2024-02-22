@@ -19,7 +19,7 @@ const StyledButton = styled((props) => <Link {...props} />)`
     border-radius: 32px;
     text-decoration: none;
 
-    :hover {
+    &:hover {
         cursor: pointer;
         background-color: ${(props) => (props.inverse ? colors.offWhite : colors.accentHover)};
     }

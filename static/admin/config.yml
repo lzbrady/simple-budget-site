@@ -13,8 +13,7 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
-    # path: "{{slug}}/index"
+    slug: "{slug}}"
     media_folder: ""
     public_folder: ""
     editor:
@@ -28,11 +27,5 @@ collections:
           name: "cover_image",
           widget: "image",
           required: false,
-          allow_multiple: false,
-          media_library:
-            config:
-              multiple: false
-              max_file_size: 512000 # in bytes, only for default media library
-
         }
       - { label: "Body", name: "body", widget: "markdown" }

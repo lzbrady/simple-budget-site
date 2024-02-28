@@ -17,7 +17,7 @@ collections:
     media_folder: ""
     public_folder: ""
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" } # all collections with create: true must have a title field (a different field can be used via identifier_field)
       - { label: "Publish Date", name: "date", widget: "datetime" }

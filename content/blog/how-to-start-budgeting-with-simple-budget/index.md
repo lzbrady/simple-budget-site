@@ -37,8 +37,6 @@ With our envelope-based budgeting system, getting started is easy. You begin by 
 * Categories can each be edited anytime, even all at once to plan your budget on a more holistic level
 * Simple Budget provides helpful insights, stats, and visualizations
 
-
-
 ### **Gain Insights Into Your Budget**
 
 Simple Budget offers insights that empower you to save more and spend less. Dissect your spending patterns to uncover hidden trends and areas ripe with potential savings. Simple Budget helps you gain the power to make better-informed financial decisions, and with its customizable features and insightful analytics, will make sure you are headed in the direction you want to go.

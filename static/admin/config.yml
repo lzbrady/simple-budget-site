@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: static/images/uploads
-public_folder: /images/uploads
+media_folder: static/img
+public_folder: img
 
 site_url: https://www.gosimplebudget.com
 logo_url: https://appetizers.s3.amazonaws.com/simple-budget/Simple_Budget_Logo_512x512.png # logo_url is assumed to be a URL to an image file

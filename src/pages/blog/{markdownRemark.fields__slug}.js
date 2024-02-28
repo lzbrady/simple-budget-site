@@ -10,13 +10,13 @@ export default function BlogPostTemplate({
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <div>
+    <MainLayout>
       <div>
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
-    </div>
+    </MainLayout>
   );
 }
 
